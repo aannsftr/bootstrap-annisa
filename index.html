@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRUD Master Employee</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    .table-responsive {
+      overflow-x: auto;
+    }
+  </style>
+</head>
+<body style="background-color: #f0faff;">
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <a class="navbar-brand" href="index.html"><h5>Manajemen Karyawan</h5></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link text-light" href="create.html">Tambah Karyawan</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container mt-5">
+  <div class="card shadow">
+    <div class="card-header bg-primary text-white">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <h2 class="mb-0">Daftar Karyawan</h2>
+        </div>
+        <div class="col-md-6">
+          <form class="form-inline float-md-right">
+            <div class="form-group mx-md-3 mb-2">
+              <label for="searchInput" class="sr-only">Cari</label>
+              <input type="text" class="form-control" id="searchInput" placeholder="Cari...">
+            </div>
+            <button type="submit" class="btn btn-dark mb-2">Cari</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="table-responsive">
+        <table class="table table-bordered table-hover table-striped" id="employeeTable">
+          <thead class="thead-dark">
+            <tr>
+              <th>#</th>
+              <th>Nama Lengkap</th>
+              <th>Email</th>
+              <th>Telepon</th>
+              <th>Tanggal Masuk</th>
+              <th>Posisi</th>
+              <th>Divisi</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Annisa Fitriani</td>
+              <td>annisa@gmail.com</td>
+              <td>123456789</td>
+              <td>2024-05-03</td>
+              <td>Developer</td>
+              <td>PHP Developer</td>
+              <td>
+                <div class="btn-group" role="group">
+                  <a href="update.html?id=1" class="btn btn-warning btn-sm">Edit</a>
+                  <a href="delete.html?id=1" class="btn btn-danger btn-sm">Hapus</a>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Annisa Fitriani</td>
+              <td>annisa@gmail.com</td>
+              <td>987654321</td>
+              <td>2020-12-01</td>
+              <td>Manager</td>
+              <td>HR</td>
+              <td>
+                <div class="btn-group" role="group">
+                  <a href="update.html?id=2" class="btn btn-warning btn-sm">Edit</a>
+                  <a href="delete.html?id=2" class="btn btn-danger btn-sm">Hapus</a>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Annisa Fitriani</td>
+              <td>annisa@gmail.com</td>
+              <td>567890123</td>
+              <td>2022-04-20</td>
+              <td>Secretary</td>
+              <td>Administration</td>
+              <td>
+                <div class="btn-group" role="group">
+                  <a href="update.html?id=3" class="btn btn-warning btn-sm">Edit</a>
+                  <a href="delete.html?id=3" class="btn btn-danger btn-sm">Hapus</a>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Pagination -->
+      <nav aria-label="Navigasi Halaman">
+        <ul class="pagination justify-content-center">
+          <li class="page-item"><a class="page-link" href="#" onclick="changePage(1)">1</a></li>
+          <li class="page-item"><a class="page-link" href="#" onclick="changePage(2)">2</a></li>
+          <li class="page-item"><a class="page-link" href="#" onclick="changePage(3)">3</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
